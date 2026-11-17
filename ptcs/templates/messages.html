@@ -1,3 +1,0 @@
-{% extends "base.html" %}{% block body %}<h3>Messages</h3>
-<div class="list-group">{% for p in people %}<a class="list-group-item list-group-item-action" href="/messages/{{p.id}}">{{p.name}} <small class="text-muted">{{p.role}}</small></a>
-{% else %}<div class="alert alert-info">No contacts yet. Contacts appear once a child is linked to a class with a teacher.</div>{% endfor %}</div>{% endblock %}

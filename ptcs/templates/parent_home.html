@@ -1,6 +1,0 @@
-{% extends "base.html" %}{% block body %}<h3>My children</h3>
-<div class="row g-3">{% for k in kids %}<div class="col-md-4"><a class="card card-body text-decoration-none" href="/child/{{k.id}}"><h5>{{k.name}}</h5>
-<span class="text-muted">{{k.classroom.name if k.classroom}} · View progress</span></a></div>
-{% else %}<div class="col-12"><div class="alert alert-info">No child is linked to your account yet. Ask the school admin to link your child.</div></div>{% endfor %}</div>
-<h4 class="mt-4">Announcements</h4>{% for a in anns %}<div class="card card-body mb-2"><b>{{a.title}}</b>{{a.body}}<small class="text-muted">{{a.created.strftime('%d %b %Y')}}</small></div>
-{% else %}<p class="text-muted">No announcements.</p>{% endfor %}{% endblock %}

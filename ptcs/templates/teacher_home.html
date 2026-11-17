@@ -1,3 +1,0 @@
-{% extends "base.html" %}{% block body %}<h3>My classes</h3>
-<div class="list-group">{% for c in classes %}<a class="list-group-item list-group-item-action" href="/teacher/class/{{c.id}}">{{c.name}} {{c.section}} <span class="text-muted">· {{c.students|length}} students</span></a>
-{% else %}<div class="alert alert-info">No class is assigned to you yet. Ask the admin to assign one.</div>{% endfor %}</div>{% endblock %}
