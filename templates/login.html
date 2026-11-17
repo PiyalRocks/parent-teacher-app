@@ -1,0 +1,6 @@
+{% extends "base.html" %}{% block body %}
+<div class="col-md-5 mx-auto card card-body"><h4>Log in</h4>
+<form method="post"><input class="form-control mb-2" name="email" type="email" placeholder="Email" required>
+<input class="form-control mb-3" name="password" type="password" placeholder="Password" required>
+<button class="btn btn-primary w-100">Log in</button></form>
+<a class="mt-3" href="/register">Parent? Create an account</a></div>{% endblock %}

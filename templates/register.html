@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block body %}
+<div class="col-md-5 mx-auto card card-body"><h4>Create parent account</h4>
+<form method="post"><input class="form-control mb-2" name="name" placeholder="Full name" required>
+<input class="form-control mb-2" name="email" type="email" placeholder="Email" required>
+<input class="form-control mb-3" name="password" type="password" placeholder="Password (6+ characters)" minlength="6" required>
+<button class="btn btn-primary w-100">Create account</button></form>
+<p class="small mt-2 mb-0">Your school admin will link your child to your account.</p></div>{% endblock %}
