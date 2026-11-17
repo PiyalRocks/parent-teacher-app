@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block body %}<h3>Chat with {{other.name}}</h3>
+<div class="card card-body mb-3" style="max-height:50vh;overflow:auto">{% for m in msgs %}
+<div class="mb-2 {{'text-end' if m.sender_id==current_user.id}}"><span class="d-inline-block rounded p-2 {{'bg-primary text-white' if m.sender_id==current_user.id else 'bg-light border'}}">{{m.body}}</span>
+<div class="small text-muted">{{m.sent.strftime('%d %b %H:%M')}}</div></div>{% else %}<span class="text-muted">No messages yet. Say hello.</span>{% endfor %}</div>
+<form method="post" class="d-flex gap-2"><input class="form-control" name="body" placeholder="Write a message" required><button class="btn btn-primary">Send message</button></form>{% endblock %}
